@@ -16,36 +16,34 @@ const CATEGORIES_DROPDOWN_LIST = Object.keys(CATEGORIES_LIST).map(key => ({
   label: CATEGORIES_LIST[key]
 }));
 
-class FiltersComponent extends React.Component {
-  render() {
-    return <div className={ 'FiltersComponent' }>
-      <div>
-        <Select
-          className={ 'FiltersComponent__filter' }
-          placeholder={ 'Colors' }
-          multi
-          closeOnSelect={ false }
-          name="colors"
-          value={ this.props.colors }
-          onChange={ this.props.filtersChanged('colors') }
-          options={ COLORS_DROPDOWN_LIST }
-        />
-      </div>
-      <div>
-        <Select
-          className={ 'FiltersComponent__filter' }
-          placeholder={ 'Categories' }
-          multi
-          closeOnSelect={ false }
-          name="categories"
-          value={ this.props.categories }
-          onChange={ this.props.filtersChanged('categories') }
-          options={ CATEGORIES_DROPDOWN_LIST }
-        />
-      </div>
-    </div>;
-  }
-}
+const FiltersComponent = (props) => {
+  return <div className={ 'FiltersComponent' }>
+    <div>
+      <Select
+        className={ 'FiltersComponent__filter' }
+        placeholder={ 'Colors' }
+        multi
+        closeOnSelect={ false }
+        name="colors"
+        value={ props.colors }
+        onChange={ props.filtersChanged('colors') }
+        options={ COLORS_DROPDOWN_LIST }
+      />
+    </div>
+    <div>
+      <Select
+        className={ 'FiltersComponent__filter' }
+        placeholder={ 'Categories' }
+        multi
+        closeOnSelect={ false }
+        name="categories"
+        value={ props.categories }
+        onChange={ props.filtersChanged('categories') }
+        options={ CATEGORIES_DROPDOWN_LIST }
+      />
+    </div>
+  </div>;
+};
 
 export default connect(
   (state) => {
@@ -53,8 +51,6 @@ export default connect(
       ...state.ProductPageReducer.selectedProductFilters
     };
   },
-  {
-    filtersChanged
-  }
+  { filtersChanged }
 )(FiltersComponent);
 

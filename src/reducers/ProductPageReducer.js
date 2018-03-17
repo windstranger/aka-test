@@ -1,6 +1,7 @@
 import { CATEGORIES_LIST, COLORS_LIST } from '../constants/ProductPageConstants';
 
 const FILTERS_CHANGED = 'FILTERS_CHANGED';
+
 const initialState = {
   productList: [
     {

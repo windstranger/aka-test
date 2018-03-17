@@ -6,3 +6,15 @@ export const filterProductsBySelection = (productList, selectedFilters) => {
     return (!colors.length || colorsRes > -1) && (!categories.length || hasCategory);
   });
 };
+
+export const getImageBySelectedColor = selectedProductFilters => productItem => {
+  let colorIndex = -1;
+  selectedProductFilters.colors.findIndex(color => {
+    colorIndex = productItem.colors.indexOf(color.value);
+    return colorIndex > -1;
+  });
+
+  return colorIndex > -1
+    ? productItem.pictureToImage[colorIndex]
+    : productItem.pictureToImage[0];
+};
