@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import './ProductListComponent.scss';
@@ -28,14 +29,17 @@ const ProductListComponent = ({ filteredProductList, getImageBySelectedColor }) 
   </div>;
 };
 
+ProductListComponent.PropTypes = {
+  filteredProductList: PropTypes.array,
+  getImageBySelectedColor: PropTypes.func
+};
+
 export default connect(
-  (state) => {
-    return {
-      filteredProductList: filterProductsBySelection(
-        state.ProductPageReducer.productList,
-        state.ProductPageReducer.selectedProductFilters
-      ),
-      getImageBySelectedColor: getImageBySelectedColor(state.ProductPageReducer.selectedProductFilters)
-    };
-  }
+  (state) => ({
+    filteredProductList: filterProductsBySelection(
+      state.ProductPageReducer.productList,
+      state.ProductPageReducer.selectedProductFilters
+    ),
+    getImageBySelectedColor: getImageBySelectedColor(state.ProductPageReducer.selectedProductFilters)
+  })
 )(ProductListComponent);

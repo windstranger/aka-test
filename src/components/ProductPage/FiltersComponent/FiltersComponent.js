@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import Select from 'react-select';
@@ -45,12 +46,13 @@ const FiltersComponent = (props) => {
   </div>;
 };
 
+FiltersComponent.PropTypes = {
+  colors: PropTypes.array,
+  categories: PropTypes.array
+};
+
 export default connect(
-  (state) => {
-    return {
-      ...state.ProductPageReducer.selectedProductFilters
-    };
-  },
+  (state) => ({ ...state.ProductPageReducer.selectedProductFilters }),
   { filtersChanged }
 )(FiltersComponent);
 

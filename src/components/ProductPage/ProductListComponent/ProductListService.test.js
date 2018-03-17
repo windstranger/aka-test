@@ -1,7 +1,6 @@
 import { CATEGORIES_LIST, COLORS_LIST } from '../../../constants/ProductPageConstants';
 import { filterProductsBySelection, getImageBySelectedColor } from './ProductListService';
 
-
 let productList = [
   {
     id: 1,

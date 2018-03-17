@@ -1,3 +1,10 @@
+/**
+ * filters productList by colors array and categories array
+ * apply filters with 'and' operator
+ * @param productList
+ * @param selectedFilters
+ * @returns {*}
+ */
 export const filterProductsBySelection = (productList, selectedFilters) => {
   return productList.filter(product => {
     const { colors, categories } = selectedFilters;
@@ -7,6 +14,12 @@ export const filterProductsBySelection = (productList, selectedFilters) => {
   });
 };
 
+/**
+ * finds an image in the product item related to selected color by index
+ * returns first image by default
+ * @param selectedProductFilters
+ * @returns {function(*): (string|number)}
+ */
 export const getImageBySelectedColor = selectedProductFilters => productItem => {
   let colorIndex = -1;
   selectedProductFilters.colors.findIndex(color => {
