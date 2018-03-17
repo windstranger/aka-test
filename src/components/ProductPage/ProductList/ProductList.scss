@@ -1,0 +1,33 @@
+.ProductList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__item {
+    margin: 5px;
+    @media (max-width: 320px){
+      margin: 5px 0;
+    }
+    max-width: 320px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  &__item-colors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    span {
+      margin: 0 5px;
+    }
+  }
+  &__item-image {
+    width: 100%;
+    max-height: 310px;
+  }
+  &__item-footer {
+    padding-bottom: 10px;
+  }
+  &__item-footer > span {
+    font-size: 1.2rem;
+    margin: 5px;
+  }
+}
