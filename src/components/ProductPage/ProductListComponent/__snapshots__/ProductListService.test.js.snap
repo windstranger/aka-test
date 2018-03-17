@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should filter productList on category 1`] = `
+Array [
+  Object {
+    "category": "luggage",
+    "colors": Array [
+      "black",
+      "orange",
+      "yellow",
+      "pink",
+    ],
+    "id": 4,
+  },
+]
+`;
+
+exports[`should filter productList on category 2`] = `
+Array [
+  Object {
+    "category": "backpacks",
+    "colors": Array [
+      "white",
+      "green",
+      "orange",
+      "pink",
+    ],
+    "id": 2,
+  },
+  Object {
+    "category": "backpacks",
+    "colors": Array [
+      "violet",
+      "yellow",
+      "black",
+      "pink",
+    ],
+    "id": 3,
+  },
+]
+`;
+
+exports[`should filter productList on category and color 1`] = `
+Array [
+  Object {
+    "category": "luggage",
+    "colors": Array [
+      "black",
+      "orange",
+      "yellow",
+      "pink",
+    ],
+    "id": 4,
+  },
+]
+`;
+
+exports[`should filter productList on category and color 2`] = `
+Array [
+  Object {
+    "category": "accessories",
+    "colors": Array [
+      "black",
+      "red",
+      "blue",
+      "pink",
+    ],
+    "id": 1,
+  },
+  Object {
+    "category": "backpacks",
+    "colors": Array [
+      "white",
+      "green",
+      "orange",
+      "pink",
+    ],
+    "id": 2,
+  },
+  Object {
+    "category": "backpacks",
+    "colors": Array [
+      "violet",
+      "yellow",
+      "black",
+      "pink",
+    ],
+    "id": 3,
+  },
+  Object {
+    "category": "luggage",
+    "colors": Array [
+      "black",
+      "orange",
+      "yellow",
+      "pink",
+    ],
+    "id": 4,
+  },
+]
+`;
+
+exports[`should filter productList on color 1`] = `
+Array [
+  Object {
+    "category": "accessories",
+    "colors": Array [
+      "black",
+      "red",
+      "blue",
+      "pink",
+    ],
+    "id": 1,
+  },
+]
+`;
+
+exports[`should filter productList on color 2`] = `
+Array [
+  Object {
+    "category": "accessories",
+    "colors": Array [
+      "black",
+      "red",
+      "blue",
+      "pink",
+    ],
+    "id": 1,
+  },
+  Object {
+    "category": "backpacks",
+    "colors": Array [
+      "violet",
+      "yellow",
+      "black",
+      "pink",
+    ],
+    "id": 3,
+  },
+  Object {
+    "category": "luggage",
+    "colors": Array [
+      "black",
+      "orange",
+      "yellow",
+      "pink",
+    ],
+    "id": 4,
+  },
+]
+`;
